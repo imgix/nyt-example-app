@@ -1,0 +1,299 @@
+/* Here lies some css hacks I cooked up, Front-End Gods forgive me. */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Let the browser account for adding padding or margin */
+  box-sizing: border-box;
+}
+
+body {
+  color: #303030;
+  background: #ffffff;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  grid-gap: 17px;
+  grid-auto-rows: minmax(20px, 40px);
+}
+
+.main-heading {
+  display: flex;
+  grid-column: 2 / 17;
+  grid-row: 2 / 3;
+  background: hsl(0, 0%, 100%);
+  justify-content: center;
+  padding-top: 1.2rem;
+}
+
+.main-heading-info {
+  display: flex;
+  grid-column: 2 / 17;
+  grid-row: 3 / 4;
+  justify-content: center;
+}
+
+.main-media-headline {
+  grid-column: 2 / 17;
+  grid-row: 4 / 5;
+}
+
+.main-media-text {
+  grid-column: 11 / 17;
+  grid-row: 5 / 10;
+  padding: 0.55rem;
+}
+
+.main-media-content {
+  grid-column: 2 / 11;
+  grid-row: 5 / 10;
+}
+
+.main-media-content > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.headline {
+  grid-column: 11 / 17;
+  grid-row: 4 / 10;
+  padding: 0.75rem;
+}
+
+.headline-heading {
+  font-size: 1.525rem;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+  padding-bottom: 7px;
+}
+
+.sub-headline-heading {
+  font-size: 1.225rem;
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+  padding-bottom: 7px;
+}
+
+.media-text-left {
+  grid-column: 2 / 6;
+  grid-row: 10 / 16;
+}
+
+.media-center {
+  grid-column: 6 / 13;
+  grid-row: 10 / 16;
+}
+
+.media-center > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.media-text-right {
+  grid-column: 13 / 17;
+  grid-row: 10 / 16;
+}
+
+.media-divider-heading {
+  grid-column: 2 / 17;
+  grid-row: 16 / 17;
+}
+
+.media-divider-heading > div {
+  display: flex;
+  justify-content: left;
+  padding-top: 1vh;
+}
+
+.media-divider {
+  grid-column: 2 / 17;
+  grid-row: 17 / 23;
+}
+
+.with-margin {
+  margin-top: 10px;
+}
+
+.media-divider > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.media-column-left {
+  grid-column: 2 / 8;
+  grid-row: 23 / 27;
+  background: rgb(218, 218, 228);
+}
+
+.media-column-right {
+  grid-column: 8 / 17;
+  grid-row: 23 / 27;
+  background: rgb(218, 218, 228);
+}
+
+@media screen and (max-width: 700px) {
+  .headline {
+    grid-column: 2 / 17;
+    grid-row: 4 / 7;
+  }
+
+  .main-media-text {
+    grid-column: 2 / 17;
+    grid-row: 9 / 11;
+    padding: 0;
+  }
+
+  .main-media-content {
+    grid-column: 2 / 17;
+    grid-row: 5 / 9;
+  }
+
+  .media {
+    grid-row: 5 / 10;
+  }
+
+  .media-text-left {
+    grid-column: 2 / 17;
+    grid-row: 11 / 13;
+  }
+
+  .media-center {
+    grid-column: 2 / 17;
+    grid-row: 13 / 18;
+  }
+  .media-text-right {
+    grid-column: 2 / 17;
+    grid-row: 18 / 20;
+  }
+
+  .media-divider-heading {
+    grid-column: 2 / 17;
+    grid-row: 20 / 22;
+  }
+
+  .media-divider {
+    grid-column: 2 / 17;
+    grid-row: 22 / 27;
+  }
+
+  .media-column-left {
+    grid-column: 2 / 17;
+    grid-row: 27 / 31;
+  }
+
+  .media-column-right {
+    grid-column: 2 / 17;
+    grid-row: 27 / 31;
+  }
+
+  .left-border {
+    border-left: none !important;
+    border-bottom: 1px solid rgba(194, 194, 194, 0.658);
+  }
+
+  .right-border {
+    border-right: none !important;
+  }
+
+  .extra-text-first {
+    display: none;
+  }
+
+  .extra-text-last {
+    display: none;
+  }
+
+  .extra-text-very-last {
+    display: none;
+  }
+
+  .with-margin {
+    margin-top: none;
+  }
+
+  .ellipsis {
+    display: inline;
+  }
+}
+
+
+.p-text {
+  line-height: 1.2rem;
+}
+
+.title-text {
+  font-style: italic;
+}
+
+.ellipsis {
+  display: none;
+}
+
+.left-border {
+  border-left: 1px solid rgba(194, 194, 194, 0.658);
+}
+
+.right-border {
+  border-right: 1px solid rgba(194, 194, 194, 0.658);
+}
+
+.bottom-border {
+  border-bottom: 1px solid rgba(194, 194, 194, 0.658);
+}
+
+.top-border {
+  border-top: 1px solid rgba(194, 194, 194, 0.658);
+}
+
+
+@media screen and (max-width: 440px) {
+  .extra-text-next {
+    display: none;
+  }
+
+  .extra-text-first {
+    display: none;
+  }
+
+  .extra-text-very-last {
+    display: none;
+  }
+  .ellipsis {
+    display: inline !important;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .extra-text-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .extra-text-last {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .extra-text-first {
+    display: none;
+  }
+}
